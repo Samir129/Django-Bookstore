@@ -19,6 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    #books/2/
-    path('<int:pk>/', views.DetailView.as_view(), name='detail')
+    # books/2/
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
+    path('add', views.BookCreate.as_view(), name='book-add')
 ]
